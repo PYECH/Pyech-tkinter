@@ -8,7 +8,7 @@ from art import text2art
 ruta_script = os.path.dirname(os.path.abspath(__file__))
 
 # Combina la ruta del script con el nombre de archivo del icono
-ruta_icono = os.path.join(ruta_script, "nombre_del_icono.ico")
+ruta_icono = os.path.join(ruta_script, "NOMBRE DEL ICONO DE TKINTER.ico")
 
 root = tk.Tk()
 root.title("Interfaz del Hacker")
