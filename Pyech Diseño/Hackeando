@@ -1,19 +1,29 @@
+import os
 import tkinter as tk
 import random
 import string
-import pyfiglet
+from art import text2art
+
+# Obtén la ruta actual del script
+ruta_script = os.path.dirname(os.path.abspath(__file__))
+
+# Combina la ruta del script con el nombre de archivo del icono
+ruta_icono = os.path.join(ruta_script, "nombre_del_icono.ico")
 
 root = tk.Tk()
 root.title("Interfaz del Hacker")
 root.configure(bg="black")
 root.attributes("-fullscreen", True)
 
+# Establece el icono utilizando la ruta capturada automáticamente
+root.iconbitmap(ruta_icono)
+
 texto = tk.Text(root, bg="black", fg="green", font=("Courier", 20))
 texto.pack(expand=True, fill="both")
 
 total_caracteres = 0
 
-titulo_ascii = pyfiglet.figlet_format("PYENDRECHOU")
+titulo_ascii = text2art("PYENDRECHOU")
 
 texto.insert(tk.END, "C:\\Windows\\System32>")
 texto.insert(tk.END, "\n\n")
